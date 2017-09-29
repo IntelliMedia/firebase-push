@@ -1,8 +1,33 @@
-var http = require('http');
+'use strict';
 
-var port = process.env.PORT || 3000;
+const http = require('http');
+const firebase = require("firebase-admin");
+const serviceAccount = require("./private/GVDemo-a034f68fba6f.json"); 
+const testData = require("./data/studentSummary.json"); 
+const dbPath = "1/userState/https%3A%2F%2Flearn%2Econcord%2Eorg%2Fapi%2Fv1%2Fclasses%2F325/https%3A%2F%2Flearn%2Econcord%2Eorg%2F71692/itsData";
 
-var server = http.createServer(function(req, res) {
+// Initialize connection to Firebase
+
+console.info("Initialize firebase");
+let learnPortalCredential = firebase.credential.cert(serviceAccount);
+let app = firebase.initializeApp({
+  credential: learnPortalCredential,
+  databaseURL: "https://gvdemo-6f015.firebaseio.com"
+}, "LearnPortal");
+
+let db = firebase.database(app);
+
+// Try to push data
+
+console.info("Push data to firebase");
+let ref = db.ref(dbPath);
+ref.set(testData);
+
+// Start listening and wait forever
+
+let port = process.env.PORT || 3000;
+
+let server = http.createServer(function(req, res) {
   res.writeHead(200);
   res.end('Hello Http');
 });

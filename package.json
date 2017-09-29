@@ -1,0 +1,8 @@
+{
+    "name": "firebase-push",
+    "version": "1.0.0",
+    "description": "Try pushing data to a Firebase db from Node.js",
+    "dependencies": {
+        "firebase-admin": "^5.3.0"
+    }
+}

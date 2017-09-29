@@ -1,7 +1,10 @@
+// Simple test app to push data into Firebase db using nodejs
+
 'use strict';
 
 const http = require('http');
 const firebase = require("firebase-admin");
+// The 'private' directory doesn't exist in source control, create and populate with Firebase cert data
 const serviceAccount = require("./private/GVDemo-a034f68fba6f.json"); 
 const testData = require("./data/studentSummary.json"); 
 const dbPath = "1/userState/https%3A%2F%2Flearn%2Econcord%2Eorg%2Fapi%2Fv1%2Fclasses%2F325/https%3A%2F%2Flearn%2Econcord%2Eorg%2F71692/itsData";

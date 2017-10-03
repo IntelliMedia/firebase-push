@@ -1,0 +1,80 @@
+{
+    "studentModel": {
+        "conceptsAggregated": [
+            {
+                "conceptId": "LG1.P2",
+                "score": 0.4
+            },
+            {
+                "conceptId": "LG1.A3",
+                "score": 0.3
+            },
+            {
+                "conceptId": "LG1.C2b",
+                "score": 0.2
+            },
+            {
+                "conceptId": "LG1.C2a",
+                "score": 0.1          
+            }
+        ],
+        "conceptsByChallenge": {
+            "allele-targetMatch-visible-simpleDom": [
+                {
+                    "conceptId": "LG1.P2",
+                    "totalBottomOutHintsDelivered": 0,
+                    "totalHintsDelivered": 0,
+                    "totalAttempts": 5,
+                    "totalCorrect": 0,
+                    "score": 0
+                },
+                {
+                    "conceptId": "LG1.A3",
+                    "totalBottomOutHintsDelivered": 3,
+                    "totalHintsDelivered": 5,
+                    "totalAttempts": 5,
+                    "totalCorrect": 0,
+                    "score": 0
+                },
+                {
+                    "conceptId": "LG1.C2b",
+                    "totalBottomOutHintsDelivered": 0,
+                    "totalHintsDelivered": 0,
+                    "totalAttempts": 15,
+                    "totalCorrect": 15,
+                    "score": 1
+                },
+                {
+                    "conceptId": "LG1.C2a",
+                    "totalBottomOutHintsDelivered": 0,
+                    "totalHintsDelivered": 0,
+                    "totalAttempts": 15,
+                    "totalCorrect": 15,
+                    "score": 1
+                }
+            ]
+        },
+        "traitScores": [
+            {
+                "trait": "unknown",
+                "score": 0
+            },
+            {
+                "trait": "sex",
+                "score": 0
+            },
+            {
+                "trait": "hindlimbs",
+                "score": 1
+            },
+            {
+                "trait": "forelimbs",
+                "score": 1
+            },
+            {
+                "trait": "wings",
+                "score": 1
+            }
+        ]
+    }
+}

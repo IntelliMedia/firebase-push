@@ -6,7 +6,8 @@ const http = require('http');
 const firebase = require("firebase-admin");
 // The 'private' directory doesn't exist in source control, create and populate with Firebase cert data
 const serviceAccount = require("./private/GVDemo-a034f68fba6f.json"); 
-const testData = require("./data/studentSummary.json"); 
+//const testData = require("./data/studentSummary.json"); 
+const testData = require("./data/testData1.json"); 
 const dbPath = "1/userState/https%3A%2F%2Flearn%2Econcord%2Eorg%2Fapi%2Fv1%2Fclasses%2F325/https%3A%2F%2Flearn%2Econcord%2Eorg%2F71692/itsData";
 
 // Initialize connection to Firebase
@@ -24,7 +25,13 @@ let db = firebase.database(app);
 
 console.info("Push data to firebase");
 let ref = db.ref(dbPath);
-ref.set(testData);
+ref.set(testData)
+.then(() => {
+  console.info("Success!");
+})
+.catch((err) => {
+  console.error("Unable to upload data", e);
+});
 
 // Start listening and wait forever
 

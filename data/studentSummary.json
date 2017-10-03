@@ -3,19 +3,19 @@
         "traitScores": [
             {
                 "trait": "forelimbs",
-                "score": 0.5
+                "score": 0.555
             },
             {
                 "trait": "sex",
-                "score": 1
+                "score": 0.666
             },
             {
                 "trait": "hindlimbs",
-                "score": 1
+                "score": 0.777
             },
             {
                 "trait": "wings",
-                "score": 1
+                "score": 0.888
             }
         ],
         "conceptsByChallenge": {

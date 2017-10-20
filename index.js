@@ -20,6 +20,7 @@ let app = firebase.initializeApp({
 }, "LearnPortal");
 
 let db = firebase.database(app);
+//firebase.database.enableLogging(true);
 
 // Try to push data
 
